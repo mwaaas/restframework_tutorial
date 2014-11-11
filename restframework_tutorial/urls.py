@@ -19,8 +19,8 @@ urlpatterns = patterns('',
     )
 
 other_url= [
-    url(r'^snippets/$', views.SnippetList.as_view()),
-    url(r'^snippets/(?P<pk>[0-9]+)$', views.SnippetDetail.as_view())
+    url(r'^snippets/$', views.SnippetList.as_view(), name='snippets'),
+    url(r'^snippets/(?P<pk>[0-9]+)$', views.SnippetDetail.as_view(), name='snippets_detail')
 ]
 
 urlpatterns += format_suffix_patterns(other_url)
